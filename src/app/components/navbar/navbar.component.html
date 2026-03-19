@@ -1,0 +1,48 @@
+<div class="dream-top-bar">
+  Fully Licenced & Insuranced
+</div>
+<!-- Navigation -->
+<nav class="dream-nav">
+  <div class="dream-nav-container">
+
+    <!-- Logo -->
+    <a [routerLink]="'/'" class="dream-logo">
+      <img [src]="logo.src" [alt]="logo.alt" class="dream-logo-img">
+      <span class="dream-logo-text">
+        {{ logo.text.slice(0,5) }}<span>{{ logo.text.slice(5) }}</span>
+      </span>
+    </a>
+
+    <!-- Navigation Links -->
+    <ul class="dream-nav-links" [class.mobile-open]="menuOpen">
+
+      <li *ngFor="let link of navLinks">
+
+        <!-- Normal Link -->
+        <a
+          *ngIf="!link.isButton"
+          [routerLink]="link.url"
+          (click)="menuOpen=false">
+          {{ link.name }}
+        </a>
+
+        <!-- Button Link -->
+        <a
+          *ngIf="link.isButton"
+          [routerLink]="link.url"
+          class="dream-btn-nav"
+          (click)="menuOpen=false">
+          {{ link.name }}
+        </a>
+
+      </li>
+
+    </ul>
+
+    <!-- Mobile Menu Icon -->
+    <div class="dream-mobile-menu" (click)="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+
+  </div>
+</nav>

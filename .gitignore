@@ -1,0 +1,12 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+.angular/
+
+# Editor settings
+.vscode/
+
+# Environment files (if any)
+.env

@@ -1,0 +1,90 @@
+
+<app-navbar></app-navbar>
+
+
+<!-- Page Header -->
+<section class="dream-page-header">
+  <h1>Our <span>Services</span></h1>
+  <p>We bring the sweet stuff to any occasion! From intimate events  to massive festivals, we've got you covered.</p>
+</section>
+
+<!-- Services Section -->
+<section class="dream-services-section">
+  <div class="dream-container">
+    <div class="dream-services-grid">
+      <div class="dream-service-card" *ngFor="let service of services" [id]="service.id">
+        <div class="dream-service-visual">
+          <div class="dream-service-bg"></div>
+          <div class="dream-service-emoji">{{ service.emoji }}</div>
+        </div>
+        <div class="dream-service-content">
+          <div class="dream-service-header">
+            <div class="dream-service-icon"><i [class]="service.icon"></i></div>
+            <h3 class="dream-service-title">{{ service.title }}</h3>
+          </div>
+          <p class="dream-service-desc">{{ service.desc }}</p>
+          <ul class="dream-service-features">
+            <li *ngFor="let feature of service.features">
+              <i class="fas fa-check"></i> {{ feature }}
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Process Section -->
+<section class="dream-process-section">
+  <div class="dream-container">
+    <div class="dream-section-header">
+      <h2>How It <span>Works</span></h2>
+      <p>Booking our truck is easy as 1-2-3-4!</p>
+    </div>
+    <div class="dream-process-grid">
+      <div class="dream-process-card" *ngFor="let step of processSteps">
+        <div class="dream-process-number">{{ step.number }}</div>
+        <h4>{{ step.title }}</h4>
+        <p>{{ step.desc }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="dream-testimonials-section">
+  <div class="dream-container">
+    <div class="dream-section-header">
+      <h2>Sweet <span>Words</span></h2>
+      <p>What our happy customers are saying</p>
+    </div>
+    <div class="dream-testimonials-grid">
+      <div class="dream-testimonial-card" *ngFor="let t of testimonials">
+        <div class="dream-testimonial-stars">
+          <i class="fas fa-star" *ngFor="let s of [].constructor(t.stars)"></i>
+        </div>
+        <p class="dream-testimonial-text">{{ t.text }}</p>
+        <div class="dream-testimonial-author">
+          <div class="dream-testimonial-avatar">{{ t.avatar }}</div>
+          <div class="dream-testimonial-info">
+            <h4>{{ t.name }}</h4>
+            <p>{{ t.role }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="dream-cta-section">
+  <div class="dream-container">
+    <h2>Ready to Sweeten Your Event?</h2>
+    <p>Check Our Menu</p>
+    <a href="/menu" class="dream-btn-cta">
+      <i class="fas fa-calendar-check"></i> View Menu
+    </a>
+  </div>
+</section>
+<app-footer></app-footer>

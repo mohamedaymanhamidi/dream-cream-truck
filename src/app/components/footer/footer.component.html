@@ -1,0 +1,53 @@
+
+ <!-- Footer -->
+    <footer class="dream-footer">
+  <div class="dream-footer-container">
+
+    <!-- Brand -->
+    <div class="dream-footer-brand">
+      <span class="dream-logo-text">Dream<span>Cream</span></span>
+      <p>Bringing joy and delicious ice cream to events across the city. Book our truck for your next celebration!</p>
+
+      <div class="dream-social-links">
+        <a *ngFor="let social of socialLinks" [href]="social.url" target="_blank">
+          <i [class]="social.icon"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="dream-footer-column">
+      <h4>Quick Links</h4>
+      <ul>
+        <li *ngFor="let link of quickLinks">
+          <a [routerLink]="link.url">{{ link.name }}</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div class="dream-footer-column">
+      <h4>Services</h4>
+      <ul>
+        <li *ngFor="let service of services">
+          <a [routerLink]="service.url">{{ service.name }}</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="dream-footer-column">
+      <h4>Contact</h4>
+      <ul>
+        <li *ngFor="let contact of contacts">
+          <a [href]="contact.url">{{ contact.name }}</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="dream-footer-bottom">
+    <p>&copy; {{ currentYear }} Dream Cream. All rights reserved. Made with 🍦 and 💕</p>
+  </div>
+</footer>

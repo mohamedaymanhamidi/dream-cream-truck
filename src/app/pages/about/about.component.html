@@ -1,0 +1,75 @@
+<app-navbar></app-navbar>
+
+<!-- Page Header -->
+<section class="dream-page-header">
+  <h1>Our Story</h1>
+  <p>From a dream to your neighborhood - the sweet journey of Dream Cream</p>
+</section>
+
+<!-- About Section -->
+<!-- <section class="dream-about-section">
+  <div class="dream-container">
+    <div class="dream-about-grid">
+      <div class="dream-about-img">
+        <img src="/mnt/kimi/upload/dreamcream.jpeg" alt="Dream Cream Story">
+      </div>
+      <div class="dream-about-content">
+        <h2>It All Started With a <span>Dream</span></h2>
+        <p *ngFor="let paragraph of aboutParagraphs">{{ paragraph }}</p>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- Timeline -->
+<section class="dream-timeline">
+  <div class="dream-container">
+    <div class="dream-section-header">
+      <h2>Our <span>Journey</span></h2>
+    </div>
+    <div class="dream-timeline-items">
+      <div class="dream-timeline-item" *ngFor="let event of timeline">
+        <div class="dream-timeline-year">{{ event.year }}</div>
+        <div class="dream-timeline-content">
+          <h4>{{ event.title }}</h4>
+          <p>{{ event.desc }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Team -->
+<section class="dream-team">
+  <div class="dream-container">
+    <div class="dream-section-header">
+      <h2>Meet the <span>Dream Team</span></h2>
+    </div>
+    <div class="dream-team-grid">
+      <div class="dream-team-card" *ngFor="let member of team">
+        <div class="dream-team-img">{{ member.emoji }}</div>
+        <h4>{{ member.name }}</h4>
+        <p>{{ member.position }}</p>
+        <span>{{ member.desc }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Values -->
+<section class="dream-values">
+  <div class="dream-container">
+    <div class="dream-section-header">
+      <h2>Our <span>Values</span></h2>
+    </div>
+    <div class="dream-values-grid">
+      <div class="dream-value-card" *ngFor="let value of values">
+        <div class="dream-value-icon"><i [class]="value.icon"></i></div>
+        <h4>{{ value.title }}</h4>
+        <p>{{ value.desc }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

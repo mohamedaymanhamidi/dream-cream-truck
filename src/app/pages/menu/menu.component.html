@@ -1,0 +1,402 @@
+
+<app-navbar></app-navbar>
+
+
+<div class="dream-menu-nav">
+  <div class="dream-menu-nav-container">
+
+    <button class="dream-menu-tab"
+      [class.active]="activeSection === 'cones'"
+      (click)="showMenu('cones')">
+      <i class="fas fa-ice-cream"></i> Cones
+    </button>
+
+    <button class="dream-menu-tab"
+      [class.active]="activeSection === 'shaved-ice'"
+      (click)="showMenu('shaved-ice')">
+      <i class="fas fa-snowflake"></i> Shaved Ice
+    </button>
+
+    <button class="dream-menu-tab"
+      [class.active]="activeSection === 'shakes'"
+      (click)="showMenu('shakes')">
+      <i class="fas fa-blender"></i> Shakes
+    </button>
+
+    <button class="dream-menu-tab"
+      [class.active]="activeSection === 'sundaes'"
+      (click)="showMenu('sundaes')">
+      <i class="fas fa-glass-whiskey"></i> Sundaes
+    </button>
+
+    <button class="dream-menu-tab"
+      [class.active]="activeSection === 'drinks'"
+      (click)="showMenu('drinks')">
+      <i class="fas fa-coffee"></i> Drinks
+    </button>
+
+    
+    <button class="dream-menu-tab"
+      [class.active]="activeSection === 'toppings'"
+      (click)="showMenu('toppings')">
+      Toppings
+    </button>
+
+  </div>
+</div>
+
+<section id="cones" class="dream-menu-section" [class.active]="activeSection === 'cones'">
+  <div class="dream-container">
+
+    <div class="dream-section-header">
+      <h2>Ice Cream <span>Cones</span></h2>
+      <p>Regular and waffle cones with delicious flavors</p>
+    </div>
+
+    <div class="dream-menu-grid">
+
+      <div class="dream-menu-card" *ngFor="let item of cones">
+
+        <div class="dream-menu-img">{{item.emoji}}</div>
+
+        <div class="dream-menu-content">
+
+          <div class="dream-menu-header">
+            <h3 class="dream-menu-title">{{item.name}}</h3>
+          </div>
+
+          <!-- <p class="dream-menu-desc">{{item.description}}</p> -->
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<section id="shaved-ice" class="dream-menu-section" [class.active]="activeSection === 'shaved-ice'">
+
+  <div class="dream-container">
+
+    <div class="dream-section-header">
+      <h2>Shaved Ice</h2>
+      <p>Refreshing fruit flavored shaved ice</p>
+    </div>
+
+    <div class="dream-menu-grid">
+
+      <div class="dream-menu-card" *ngFor="let item of shavedIce">
+
+        <div class="dream-menu-img">{{item.emoji}}</div>
+
+        <div class="dream-menu-content">
+
+          <div class="dream-menu-header">
+            <h3 class="dream-menu-title">{{item.name}}</h3>
+          </div>
+
+          <!-- <p class="dream-menu-desc">{{item.description}}</p> -->
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section id="shakes" class="dream-menu-section" [class.active]="activeSection === 'shakes'">
+
+  <div class="dream-container">
+
+    <div class="dream-section-header">
+      <h2>Shakes & Smoothies</h2>
+      <p>Fresh blended creamy drinks</p>
+    </div>
+
+    <div class="dream-menu-grid">
+
+      <div class="dream-menu-card" *ngFor="let item of shakes">
+
+        <div class="dream-menu-img">{{item.emoji}}</div>
+
+        <div class="dream-menu-content">
+
+          <div class="dream-menu-header">
+            <h3 class="dream-menu-title">{{item.name}}</h3>
+          </div>
+
+          <!-- <p class="dream-menu-desc">{{item.description}}</p> -->
+
+        </div>
+
+      </div>
+
+      <div class="dream-menu-card" *ngFor="let item of smoothies">
+
+        <div class="dream-menu-img">{{item.emoji}}</div>
+
+        <div class="dream-menu-content">
+
+          <div class="dream-menu-header">
+            <h3 class="dream-menu-title">{{item.name}}</h3>
+          </div>
+
+          <!-- <p class="dream-menu-desc">{{item.description}}</p> -->
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section id="sundaes" class="dream-menu-section" [class.active]="activeSection === 'sundaes'">
+
+  <div class="dream-container">
+
+    <div class="dream-section-header">
+      <h2>Sundaes</h2>
+      <p>Delicious ice cream sundaes</p>
+    </div>
+
+    <div class="dream-menu-grid">
+
+      <div class="dream-menu-card" *ngFor="let item of sundaes">
+
+        <div class="dream-menu-img">{{item.emoji}}</div>
+
+        <div class="dream-menu-content">
+
+          <div class="dream-menu-header">
+            <h3 class="dream-menu-title">{{item.name}}</h3>
+          </div>
+
+          <!-- <p class="dream-menu-desc">{{item.description}}</p> -->
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="drinks" class="dream-menu-section" [class.active]="activeSection === 'drinks'">
+
+  <div class="dream-container">
+
+    <div class="dream-section-header">
+      <h2>Drinks</h2>
+      <p>Bubble tea and beverages</p>
+    </div>
+
+    <div class="dream-menu-grid">
+
+      <div class="dream-menu-card" *ngFor="let item of bubbleTea">
+
+        <div class="dream-menu-img">{{item.emoji}}</div>
+
+        <div class="dream-menu-content">
+
+          <div class="dream-menu-header">
+            <h3 class="dream-menu-title">{{item.name}}</h3>
+          </div>
+
+          <!-- <p class="dream-menu-desc">{{item.description}}</p> -->
+
+        </div>
+
+      </div>
+
+      <div class="dream-menu-card" *ngFor="let item of beverages">
+
+        <div class="dream-menu-img">{{item.emoji}}</div>
+
+        <div class="dream-menu-content">
+
+          <div class="dream-menu-header">
+            <h3 class="dream-menu-title">{{item.name}}</h3>
+          </div>
+
+          <!-- <p class="dream-menu-desc">{{item.description}}</p> -->
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- <section class="dream-menu-section">
+
+  <div class="dream-container">
+
+
+        <div class="dream-section-header">
+      <h2>Toppings</h2>
+      <p>Delicious Toppings To Add</p>
+    </div>
+
+    <div class="dream-menu-grid">
+
+      <div class="dream-menu-card" *ngFor="let item of toppings">
+
+        <div class="dream-menu-img">{{item.emoji}}</div>
+
+        <div class="dream-menu-content">
+
+          <div class="dream-menu-header">
+            <h3 class="dream-menu-title">{{item.name}}</h3>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>  -->
+
+
+
+<section id="toppings" class="dream-menu-section" [class.active]="activeSection === 'toppings'">
+  <div class="dream-container">
+
+    <div class="dream-section-header">
+      <h2>Toppings</h2>
+      <p>Delicious Toppings To Add</p>
+    </div>
+
+    <div class="dream-menu-grid">
+      <div class="dream-menu-card" *ngFor="let item of toppings">
+        <div class="dream-menu-img">{{item.emoji}}</div>
+        <div class="dream-menu-content">
+          <div class="dream-menu-header">
+            <h3 class="dream-menu-title">{{item.name}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<app-footer></app-footer>
+
+<!-- 
+<app-navbar></app-navbar>
+
+<section class="dream-section">
+  <div class="dream-section-header">
+    <h2>Our <span>Menu</span></h2>
+    <p>Delicious treats served fresh from our truck 🍦</p>
+  </div>
+
+  <div class="dream-menu-section">
+    <h3>🍦 Ice Cream Cones</h3>
+    <div class="dream-menu-grid">
+      <div class="dream-menu-card" *ngFor="let item of cones">
+        <div class="dream-menu-img">{{item.emoji}}</div>
+        <h4>{{item.name}}</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="dream-menu-section">
+    <h3>❄️ Shaved Ice & Slushies</h3>
+    <div class="dream-menu-grid">
+      <div class="dream-menu-card" *ngFor="let item of shavedIce">
+        <div class="dream-menu-img">{{item.emoji}}</div>
+        <h4>{{item.name}}</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="dream-menu-section">
+    <h3>🥤 Milkshakes</h3>
+    <div class="dream-menu-grid">
+      <div class="dream-menu-card" *ngFor="let item of shakes">
+        <div class="dream-menu-img">{{item.emoji}}</div>
+        <h4>{{item.name}}</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="dream-menu-section">
+    <h3>🍹 Smoothies</h3>
+    <div class="dream-menu-grid">
+      <div class="dream-menu-card" *ngFor="let item of smoothies">
+        <div class="dream-menu-img">{{item.emoji}}</div>
+        <h4>{{item.name}}</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="dream-menu-section">
+    <h3>🍨 Sundaes</h3>
+    <div class="dream-menu-grid">
+      <div class="dream-menu-card" *ngFor="let item of sundaes">
+        <div class="dream-menu-img">{{item.emoji}}</div>
+        <h4>{{item.name}}</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="dream-menu-section">
+    <h3>🍵 Bubble Tea</h3>
+    <div class="dream-menu-grid">
+      <div class="dream-menu-card" *ngFor="let item of bubbleTea">
+        <div class="dream-menu-img">{{item.emoji}}</div>
+        <h4>{{item.name}}</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="dream-menu-section">
+    <h3>🥤 Floats</h3>
+    <div class="dream-menu-grid">
+      <div class="dream-menu-card" *ngFor="let item of beverages">
+        <div class="dream-menu-img">{{item.emoji}}</div>
+        <h4>{{item.name}}</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="dream-menu-section">
+    <h3>🧁 Toppings</h3>
+    <div class="dream-menu-grid">
+      <div class="dream-menu-card" *ngFor="let item of toppings">
+        <div class="dream-menu-img">{{item.emoji}}</div>
+        <h4>{{item.name}}</h4>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<app-footer></app-footer> -->

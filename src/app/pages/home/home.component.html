@@ -1,0 +1,129 @@
+<body>
+  <!-- Animated Sprinkles -->
+  <div class="sprinkles-container" id="sprinkles"></div>
+
+  <!-- Navbar -->
+  <app-navbar></app-navbar>
+
+  <!-- Hero Section -->
+  <section class="dream-hero">
+    <div class="dream-hero-container">
+      <div class="dream-hero-content">
+        <h1>Bringing Sweet <span>Dreams to Life</span></h1>
+        <p>Premium ice cream truck experience for events, parties, and celebrations. Serving up happiness one scoop at a time!</p>
+        <div class="dream-hero-buttons">
+            <a routerLink="/menu" class="dream-btn dream-btn-primary">
+            <i class="fas fa-ice-cream"></i> View Menu
+          </a>
+          <a routerLink="/services" class="dream-btn dream-btn-secondary">
+            <i class="fas fa-calendar-check"></i> View Services
+          </a>
+        </div>
+      </div>
+      <!-- <div class="dream-hero-image">
+        <img src="assets/dcl.png" alt="Dream Cream Truck">
+        <div class="dream-truck-badge">
+          <i class="fas fa-truck"></i> Available Now!
+        </div>
+      </div> -->
+    </div>
+  </section>
+
+  <!-- Features Bar -->
+  <section class="dream-features-bar">
+    <div class="dream-features-container">
+      <div class="dream-feature-item" *ngFor="let feature of features">
+        <div class="dream-feature-icon"><i [class]="feature.icon"></i></div>
+        <div class="dream-feature-text">
+          <h4>{{ feature.title }}</h4>
+          <p>{{ feature.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<!-- Gallery Section -->
+<section class="dream-gallery-section">
+  <div class="dream-container">
+
+    <div class="dream-gallery-grid">
+
+      <div class="dream-gallery-card" *ngFor="let image of galleryImages">
+
+        <div class="dream-gallery-img">
+          <!-- PUT YOUR IMAGE PATH HERE -->
+          <img [src]="image.src" [alt]="image.title">
+        </div>
+
+        <div class="dream-gallery-overlay">
+          <!-- <h3>{{image.title}}</h3>
+          <p>{{image.description}}</p> -->
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="dream-page-header">
+  <div class="dream-container">
+    <h1>Our <span>Gallery</span></h1>
+    <p>Take a look at some sweet moments from our events and ice cream truck adventures!</p>
+  </div>
+</section>
+
+
+
+  <!-- Featured Flavors -->
+<section class="dream-section dream-flavors">
+  <div class="dream-section-header">
+    <h2>Our <span>Signature</span> Flavors</h2>
+    <p>Handcrafted with love using only the finest ingredients</p>
+  </div>
+
+  <div class="dream-flavors-grid">
+
+    <div class="dream-flavor-card"
+      *ngFor="let flavor of cones | slice:0:4">
+
+      <div class="dream-flavor-img">
+        {{ flavor.emoji }}
+      </div>
+
+      <div class="dream-flavor-content">
+        <h3>{{ flavor.name }}</h3>
+        <p>{{ flavor.description }}</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+  <!-- CTA Section -->
+  <section class="dream-cta">
+    <div class="dream-cta-content">
+    <h2>Ready to Sweeten Your Event?</h2>
+    <p>Check Our Services</p>
+    <a href="/services" class="dream-btn-cta">
+    <i class="fas fa-calendar-check"></i> View Services
+    </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <app-footer></app-footer>
+</body>

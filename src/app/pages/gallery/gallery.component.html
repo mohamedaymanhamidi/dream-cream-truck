@@ -1,0 +1,49 @@
+<!-- Navigation -->
+<app-navbar></app-navbar>
+
+<!-- Page Header -->
+<section class="dream-page-header">
+  <div class="dream-container">
+    <h1>Our <span>Gallery</span></h1>
+    <p>Take a look at some sweet moments from our events and ice cream truck adventures!</p>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="dream-gallery-section">
+  <div class="dream-container">
+
+    <div class="dream-gallery-grid">
+
+      <div class="dream-gallery-card" *ngFor="let image of galleryImages">
+
+        <div class="dream-gallery-img">
+          <!-- PUT YOUR IMAGE PATH HERE -->
+          <img [src]="image.src" [alt]="image.title">
+        </div>
+
+        <div class="dream-gallery-overlay">
+          <!-- <h3>{{image.title}}</h3> -->
+          <!-- <p>{{image.description}}</p> -->
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="dream-cta">
+  <div class="dream-cta-content">
+    <h2>Ready to Sweeten Your Event?</h2>
+    <p>Check Our Menu</p>
+    <a href="/menu" class="dream-btn dream-btn-white">
+      <i class="fas fa-calendar-check"></i> View Menu
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<app-footer></app-footer>
